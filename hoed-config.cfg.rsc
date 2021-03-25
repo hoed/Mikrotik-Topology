@@ -5,7 +5,7 @@
 add name=bridge1
 /interface ethernet
 set [ find default-name=ether1 ] comment="To LAN Switch" name=Ether1
-set [ find default-name=ether2 ] comment="INTERNET to maxindo"
+set [ find default-name=ether2 ] comment="INTERNET PROVIDER"
 set [ find default-name=ether3 ] comment="To SWITCH Server"
 set [ find default-name=ether4 ] comment="SERVER CCTV"
 set [ find default-name=ether5 ] comment="SERVER XEON"
@@ -25,12 +25,12 @@ set ether6-WIFI-1 comment=HotSpot
 /interface wireless security-profiles
 set [ find default=yes ] authentication-types=wpa2-psk eap-methods="" \
     group-ciphers=tkip mode=dynamic-keys supplicant-identity=MikroTik \
-    unicast-ciphers=tkip wpa-pre-shared-key=ohayogozaimasu \
-    wpa2-pre-shared-key=ohayogozaimasu
+    unicast-ciphers=tkip wpa-pre-shared-key=password \
+    wpa2-pre-shared-key=password
 add authentication-types=wpa2-psk eap-methods="" group-ciphers=tkip,aes-ccm \
     management-protection=allowed mode=dynamic-keys name=WPA2 \
     supplicant-identity="" unicast-ciphers=tkip,aes-ccm wpa-pre-shared-key=\
-    ohayogozaimasu wpa2-pre-shared-key=ohayogozaimasu
+    ohayogozaimasu wpa2-pre-shared-key=password
 /interface wireless
 set [ find default-name=wlan1 ] band=2ghz-b/g/n channel-width=20/40mhz-eC \
     comment=WIFI-MIKROTIK country=indonesia dfs-mode=no-radar-detect \
