@@ -1,5 +1,5 @@
 # Mikrotik-Topology
-<p align="left">
+<p align="center">
   <img src="https://static.jakmall.id/2019/02/images/brands/fcfe11/original/mikrotik.jpg?raw=true "Mikrotik"" width="400" title="hover text">
 </p>
 This mikrotik topology contains 4 Web servers with 4 Public IP Addresses which is connected to the Domain Name Server on the Cloudflare in order to access inside the web servers.
